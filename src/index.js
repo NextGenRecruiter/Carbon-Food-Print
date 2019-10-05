@@ -1,22 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import axios from axios
-import { takeEvery, put } from 'redux-saga/effects'
+// import axios from axios
+// import { takeEvery, put } from 'redux-saga/effects'
 // Provider allows us to use redux within our react app
 import { Provider } from 'react-redux';
-import logger from 'redux-logger';
+// import logger from 'redux-logger';
 // Import saga middleware
-import createSagaMiddleware from 'redux-saga';
+// import createSagaMiddleware from 'redux-saga';
 
 function* rootSaga(){
-    yield takeEvery();
+    // yield takeEvery();
 }
 
-const sagaMiddleware = createSagaMiddleware();
+// const sagaMiddleware = createSagaMiddleware();
 
 // Create one store that all components can use
 const storeInstance = createStore(
@@ -24,9 +24,9 @@ const storeInstance = createStore(
         
     }),
     // Add sagaMiddleware to our store
-    applyMiddleware(sagaMiddleware, logger),
+    // applyMiddleware(sagaMiddleware),
 );
-sagaMiddleware.run(rootSaga);
+// sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(<Provider store={storeInstance}><App /></Provider>, 
     document.getElementById('root'));
