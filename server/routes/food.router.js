@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
 // hit delete('/food/name')
 // remove a food from your day
 router.delete('/:name', (req, res) => {
-    const queryText = `DELETE FROM "days" WHERE "food"=$1`;
+    const queryText = `DELETE FROM "days" WHERE "food"=$1;`;
     pool.query(queryText, [req.params.name])
         .then((result) => { res.sendStatus(201); })
         .catch((err) => {

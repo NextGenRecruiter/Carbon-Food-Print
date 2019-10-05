@@ -3,8 +3,8 @@ const app = express();
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 5000;
 
-//Route includes
-// const daysRouter = require('./routes/days.router')
+
+const daysRouter = require('./routes/days.router')
 const foodRouter = require('./routes/food.router')
 const typeRouter = require('./routes/type.router')
 
@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended:true }));
 app.use(express.static('build'));
 
 /** ---------- ROUTES ---------- **/
-// app.use('/days', daysRouter)
+app.use('/days', daysRouter)
 app.use('/food', foodRouter)
 app.use('/type', typeRouter)
 
