@@ -1,10 +1,9 @@
 import React, { Component} from 'react';
 import './App.css';
-import Header from '../Header/Header'
-import Login from '../Login/Login'
+// import Header from '../Header/Header'
 import Home from '../Home/Home'
-import Summary from '../Summary/Summary'
-import Setting from '../Setting/Setting'
+import Summary from '../Dashboard/Dashboard'
+import Dashboard from '../Dashboard/Dashboard'
 import Social from '../Social/Social'
 import { HashRouter as Router, Route} from 'react-router-dom'
 
@@ -13,13 +12,11 @@ class App extends Component{
   render(){
     return(
       <div>
-        <Header />
         <Router>
-          <Route  path='/Login' exact component={Login}></Route>
-          <Route  path='/Home' exact component={Home}></Route>
-          <Route  path='/Summary' exact component={Summary}></Route>
-          <Route  path='/Setting' exact component={Setting}></Route>
-          <Route  path='/Social' exact component={Social}></Route>
+          <Route  path='/Home' exact component={Home}/>
+          <Route  path='/Dashboard' exact component={Dashboard}/>
+          <Route  path='/Summary' component={Summary}/>
+          <Route  path='/Social' exact component={Social}/>
         </Router>
       </div>
     )
