@@ -30,17 +30,20 @@ FROM "foods"
 JOIN "days" ON "foods".id = "days".food_id 
 GROUP BY "days".day;
 
---select all foods (and metrics) of a particular type
+--select similar foods
+--example: all proteins that are not eggs
 SELECT * FROM "foods" 
-WHERE "food_type"='Protein';
+WHERE "food_type"='Protein' AND
+"food_item" <>'Eggs';
 
 --select all metrics for one food
+-- example: eggs
 SELECT * FROM "foods" 
-WHERE "food_item"='Avocado';
+WHERE "food_item"='Eggs';
 
 INSERT INTO "days" 
 ("day","food_id") 
-VALUES ('2019-10-06', 7);
+VALUES ('2019-10-07', 7);
 
 
 -----------------INSERTS--------------
