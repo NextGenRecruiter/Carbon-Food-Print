@@ -19,8 +19,16 @@ router.get('/:date', (req, res) => {
 // hit get('/days')
 // get the sum of emissions for each day
 router.get('/', (req, res) => {
-    const queryText = `SELECT "days".day, sum("foods".emissions_per_day_kg) FROM "foods" 
-                        JOIN "days" ON "foods".food_item = "days".food GROUP BY "days".day;`;
+    const queryText = `SELECT 
+                            "days".day, 
+                            sum("foods".emissions_per_day_kg) AS "emissions", 
+                            sum("foods".driven_miles) AS "miles", 
+                            sum("foods".heating_days) AS "heating",
+                            sum("foods".water_liters) AS "water",
+                            sum("foods".showers) AS "showers"
+                        FROM "foods" 
+                        JOIN "days" ON "foods".food_item = "days".food 
+                        GROUP BY "days".day;`;
     pool.query(queryText)
         .then((result) => { res.send(result.rows); })
         .catch((err) => {
