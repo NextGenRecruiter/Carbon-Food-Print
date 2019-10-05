@@ -16,7 +16,6 @@ export const FoodData = () => {
             <div className={'food-card'}>
                 <div className={'header-container'}>
                    <p>{fakeData.foodItem} (Serving:{fakeData.amount})</p>
-                    <button>ADD</button> 
                 </div>
                 <div className={'icon-container'}>
                     <img className={'styled-img'} src={almond} alt={'img'}/>
@@ -41,8 +40,10 @@ export const FoodData = () => {
                         </div>
                     </div>
                 </div>
+
                 
             </div>
+            <button className={'add-button'}>+ Add this food today</button>
             
         </div>
         </>
