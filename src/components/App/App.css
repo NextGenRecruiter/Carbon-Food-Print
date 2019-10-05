@@ -15,8 +15,8 @@
 
 .food-card-container {
   margin:20px;
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
 }
 
 .food-card {
