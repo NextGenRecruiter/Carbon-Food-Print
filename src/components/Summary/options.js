@@ -1,6 +1,5 @@
 import React from 'react';
 import almond from '../../assets/almond-svgrepo-com.svg'
-import { OtherOptions } from './options';
 
 const fakeData = {
     foodItem: 'Apple',
@@ -10,9 +9,8 @@ const fakeData = {
     showers: '0.2192'
 };
 
-export const FoodData = () => {
+export const OtherOptions = () => {
     return (
-        <>
         <div className={'food-card-container'}>
             <div className={'food-card'}>
                 <div className={'header-container'}>
@@ -44,9 +42,7 @@ export const FoodData = () => {
                 </div>
                 
             </div>
-            
+            <OtherOptions />
         </div>
-        <OtherOptions />
-        </>
     )
 };
