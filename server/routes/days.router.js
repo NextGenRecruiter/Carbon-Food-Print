@@ -38,4 +38,19 @@ router.get('/totals/:date', (req, res) => {
         });
 });
 
+router.get('/data', (req, res) => {
+    const queryText = `SELECT 
+                            "days".day, 
+                            sum("foods".emissions_per_day_kg) AS "emissions"
+                        FROM "foods" 
+                        JOIN "days" ON "foods".food_item = "days".food
+                        GROUP BY "days".day;`;
+    pool.query(queryText)
+        .then((result) => { res.send(result.rows); })
+        .catch((err) => {
+            console.log('Error completing SELECT movie query', err);
+            res.sendStatus(500);
+        });
+});
+
 module.exports = router;
