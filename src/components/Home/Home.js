@@ -12,7 +12,7 @@ render(){
     <div>
       <FoodData/>
       <Recommendations />
-      <Footer/>
+      <Footer title={"View today's food"} link={'/summary'}/>
     </div>
   )
 }
