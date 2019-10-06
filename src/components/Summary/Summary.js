@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import { FoodData } from '../Home/food-data';
+import React, { Component, useState } from 'react';
 
-class Summary extends Component{
+class Summary extends Component {
 
-render(){
-  return (
-    <div>
-    </div>
-  )
-}
+  render() {
+
+    return (
+      <div>
+      </div>
+    )
+  }
 }
 export default Summary;

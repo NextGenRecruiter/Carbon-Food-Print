@@ -1,5 +1,6 @@
-import React from 'react';
-import almond from '../../assets/almond-svgrepo-com.svg'
+import React, { Component, useState } from 'react';
+import Axios from 'axios';
+
 
 const fakeData = {
     foodItem: 'Apple',
@@ -9,10 +10,19 @@ const fakeData = {
     showers: '0.2192'
 };
 
-export const FoodData = () => {
+export const FoodData = (props) => {
+    const [item, setItem] = useState([]);
+    Axios.get('/days/' + props.date).then(response => {
+        setItem(response.data)
+    }).then(error => {
+        console.log(error)
+    })
     return (
         <>
-        <div className={'food-card-container'}>
+        {JSON.stringify(item)}<
+
+            <p>{props.date}</p>
+        {/* <div className={'food-card-container'}>
             <div className={'food-card'}>
                 <div className={'header-container'}>
                    <p>{fakeData.foodItem} (Serving:{fakeData.amount})</p>
@@ -45,7 +55,7 @@ export const FoodData = () => {
             </div>
             <button className={'add-button'}>+ Add this food today</button>
             
-        </div>
+        </div> */}
         </>
     )
 };

@@ -6,7 +6,9 @@
   "dependencies": {
     "axios": "^0.19.0",
     "express": "^4.17.1",
+    "node-sass": "^4.12.0",
     "nodeman": "^1.1.2",
+    "nodemon": "^1.19.3",
     "pg": "^7.12.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
@@ -17,10 +19,13 @@
     "react-scripts": "^3.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server/server.js",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "client": "react-scripts start",
+    "server": "nodemon  --watch server server/server.js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "sass-watch": "node-sass --watch sass -o src/components/App"
   },
   "eslintConfig": {
     "extends": "react-app"
