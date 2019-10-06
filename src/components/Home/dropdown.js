@@ -28,21 +28,14 @@ class DropDown extends Component{
        ],
        Item:'',
        dataObject:[],
-       show: false
+       show: true
    }
-componentDidMount = () =>{
-   this.getItem();
-}
+// componentDidMount = () =>{
+//    this.getItem();
+// }
 
 getItem = () =>{
-//    axios.get('/food/').then( (response) => {
-//        this.setState({
-//            dataObject:response.data,
-//        })
-//        //console.log(response.data);
-//    }).catch((error)=>{
-//        console.log(error);
-//    });
+    this.setState({show: false});
 }
 setItem = (value) =>{
    this.setState({
@@ -72,10 +65,10 @@ render(){
          })}
          </select>
          <Link className={'dropdown-search'} onClick={this.getItem} to={`/home/${this.state.Item}`}>Enter</Link>
-         <div id={'fun-fact'}>
+         {this.state.show && <div id={'fun-fact'}>
           <h2>Facts about Carbon Emissions</h2>
           <p>This is a really sweet fact about Carbon Emissions and how you can help the cause!</p>
-         </div>
+         </div>}
        </div>
 
        <Switch>
