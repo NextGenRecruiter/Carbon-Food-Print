@@ -1,0 +1,17 @@
+// metrics
+.metrics{
+
+	.metrics-heading{
+		font-size:1rem;
+		font-weight:400;
+		font-style:italic;
+		margin:0px;
+	}
+	.metrics-container{
+		margin:10px;
+	}
+	.metrics-item{
+		display:flex;
+		flex-direction:row;
+	}
+}

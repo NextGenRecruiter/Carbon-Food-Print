@@ -1,0 +1,42 @@
+
+
+.card {
+  padding: 20px;
+  // height: 500px;
+  // width:500px;
+  background:$white;
+  margin-top:10px;
+  position:relative;
+
+  .card-pointer{
+  	width: 0; 
+	height: 0; 
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 10px solid $white;
+	position:absolute;
+	bottom:100%;
+	left:calc(50% - 50px);
+  }
+
+  .card-header{
+  	display:flex;
+  	flex-direction:row;
+  	align-items:center;
+  	justify-content:center;
+  }
+
+  .card-name{
+  	display:inline;
+  }
+
+ 	.info-container{
+		background:$grey-1;
+		padding:20px;
+
+		.info-heading{
+			font-weight:300;
+		}
+	}
+}
+

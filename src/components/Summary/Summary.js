@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import FoodSummaryData from './food-summary-data'
+import { Link } from 'react-router-dom/cjs/react-router-dom';
+
 
 class FoodData extends Component {
 
     render() {
 
         return (
-            <div>
-              <FoodSummaryData date={'2019-10-05'} />
-            </div>
+            <FoodSummaryData />
         )
     }
 }
