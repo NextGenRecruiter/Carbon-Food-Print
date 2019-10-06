@@ -17,13 +17,29 @@ h2{
 h3{
 	font-size:1.25rem;
 }
+.app{
+	min-height:80vh;
+	background:$grey-1;
+}
 .app-container{
 	padding:20px 20px 40px 20px;
 	margin-bottom:40px;
-	background:$grey-1;
+	// background:$grey-1;
+	// min-height:70vh;
 }
 
 .date{
 	font-weight:200;
 	font-style:italic;
+}
+
+#fun-fact{
+	margin:20px 0px;
+	padding:20px;
+	text-align:center;
+	border:1px solid $grey-2;
+	border-radius:5px;
+	h2{
+		text-align:center;
+	}
 }

@@ -28,21 +28,14 @@ class DropDown extends Component{
        ],
        Item:'',
        dataObject:[],
-       show: false
+       show: true
    }
-componentDidMount = () =>{
-   this.getItem();
-}
+// componentDidMount = () =>{
+//    this.getItem();
+// }
 
 getItem = () =>{
-//    axios.get('/food/').then( (response) => {
-//        this.setState({
-//            dataObject:response.data,
-//        })
-//        //console.log(response.data);
-//    }).catch((error)=>{
-//        console.log(error);
-//    });
+    this.setState({show: false});
 }
 setItem = (value) =>{
    this.setState({
@@ -61,14 +54,23 @@ render(){
 
    return(
        <>
-       <select onChange={event => {console.log(event.target.value); this.setItem(event.target.value)}}>
-       {this.state.foodItem.map(i => {
-           return(
-               <option key={i}>{i}</option>
-           )
-       })}
-       </select>
-       <Link onClick={this.getItem} to={`/home/${this.state.Item}`}>Enter</Link>
+       <div className={'app-container dropdown'}>
+          <label>Add a food item</label>
+         <select onChange={event => {console.log(event.target.value); this.setItem(event.target.value)}}>
+          <option value="-1">Select a food</option>
+         {this.state.foodItem.map(i => {
+             return(
+                 <option key={i}>{i}</option>
+             )
+         })}
+         </select>
+         <Link className={'dropdown-search'} onClick={this.getItem} to={`/home/${this.state.Item}`}>Enter</Link>
+         {this.state.show && <div id={'fun-fact'}>
+          <h2>Facts about Carbon Emissions</h2>
+          <p>This is a really sweet fact about Carbon Emissions and how you can help the cause!</p>
+         </div>}
+       </div>
+
        <Switch>
        <Route
           path={'/home/beef'}

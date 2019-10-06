@@ -7,7 +7,7 @@ class Home extends Component{
 render(){
  
   return (
-    <div>
+    <div className={'app'}>
       <DropDown/>
       <Footer title={"View today's food"} link={'/summary'}/>
     </div>

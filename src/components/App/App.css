@@ -15,14 +15,26 @@ h2 {
 h3 {
   font-size: 1.25rem; }
 
+.app {
+  min-height: 80vh;
+  background: #f1f1f1; }
+
 .app-container {
   padding: 20px 20px 40px 20px;
-  margin-bottom: 40px;
-  background: #f1f1f1; }
+  margin-bottom: 40px; }
 
 .date {
   font-weight: 200;
   font-style: italic; }
+
+#fun-fact {
+  margin: 20px 0px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px; }
+  #fun-fact h2 {
+    text-align: center; }
 
 header {
   overflow: hidden;
@@ -147,6 +159,23 @@ header {
       font-weight: 300; }
     .card .recommendations button {
       padding: 10px; }
+
+.dropdown {
+  margin-bottom: 0px;
+  padding-bottom: 0px; }
+  .dropdown select {
+    background: #ffffff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-raduis: 2px;
+    width: 65%; }
+  .dropdown label {
+    display: block; }
+  .dropdown .dropdown-search {
+    text-decoration: none;
+    background: #f46036;
+    padding: 10px 20px;
+    color: #ffffff; }
 
 footer {
   background: #171123;

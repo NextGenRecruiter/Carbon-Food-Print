@@ -64,9 +64,8 @@ export const FoodData = (props) => {
                     </div>
                 </div>
                 <Recommendations/>
+                <button className={'button_primary'}>+ Add this food today</button>
             </div>
-            <button className={'button_primary'}>+ Add this food today</button>
-
         </div>
         </>
     )
