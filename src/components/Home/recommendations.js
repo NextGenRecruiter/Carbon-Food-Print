@@ -15,7 +15,6 @@ export const Recommendations = () => {
         getData();
     }, [])
 
-    console.log(data);
     return (
         <>
         <div className={'app-container'}>

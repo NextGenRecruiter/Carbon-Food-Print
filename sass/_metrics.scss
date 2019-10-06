@@ -1,6 +1,7 @@
 // metrics
 .metrics{
-
+	max-width:600px;
+	margin:20px auto;
 	.metrics-heading{
 		font-size:1rem;
 		font-weight:400;
@@ -13,5 +14,21 @@
 	.metrics-item{
 		display:flex;
 		flex-direction:row;
+		align-items:center;
+		font-size:.8rem;
+		padding:10px;
+		font-weight:800;
+		border-bottom:1px solid $grey-2;
+
+		.icon{
+			height:25px;
+			width:25px;
+		}
+	}
+	.metric-data{
+		strong{
+			margin:0px 10px;
+			font-size:1.1rem;
+		}
 	}
 }

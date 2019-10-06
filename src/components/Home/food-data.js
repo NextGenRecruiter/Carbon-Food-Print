@@ -1,10 +1,11 @@
 import React, { Component, useState, useEffect } from 'react';
-import almond from '../../assets/almond-svgrepo-com.svg';
 import beef from '../../assets/beef-steak-svgrepo-com.svg';
 import axios from 'axios'
 import Recommendations from '../Home/recommendations';
-
-
+import car from '../../assets/car-compact-svgrepo-com.svg';
+import shower from '../../assets/bathtub-with-opened-shower-svgrepo-com.svg';
+import house from '../../assets/real-estate-house-property-for-business-svgrepo-com.svg';
+import Recommendations from './recommendations';
 
 export const FoodData = (props) => {
     const [data, setData] = useState();
@@ -33,37 +34,37 @@ export const FoodData = (props) => {
                 <span className={'card-pointer'}></span>
                 <div className={'card-header'}>
                     <img className={'icon'} src={beef} alt={'img'}/>
-                    <h3 className={'card-name'}>{data ? data.food_item : ''} </h3>
-                    <div className={'card-emissions'}>
-                        <span>(Serving:{data ? data.amount_per_day : ''})</span>
-                    </div>
+                    <h3 className={'card-name'}>{data ? data.food_item : ''} </h3> 
                 </div>
-                <div className={'card-header'}>
-                    <div className={'card-emissions'}>
-                        <span className={'emissions'}>This is contributing to <strong>{data ? data.emissions_per_day_kg : ''}kg</strong> of you daily greenhouse gas emissions</span>
-                    </div>
+
+
+                <div className={'emissions-data'}>
+                    <span>CO2 Emmissions</span>
+                    <strong className={'emissions'}>{data ? data.emissions_per_day_kg : ''} kg</strong>
                 </div>
+                <div className={'serving-data'}>(Serving:{fakeData.amount})</div>
+
+                
                 <div className={'metrics'}>
                     <h4 className={'metrics-heading'}>
                         Which has the same impact as:
                     </h4>
                     <div className={'metrics-container'}>
                         <div className={'metrics-item'}>
-                            <img className={'icon'} src={almond} alt={''}/>
-                            <p className={'styled-data'}>Driving <strong>{data? data.driven_miles : ''}</strong> Miles</p>
+                            <img className={'icon'} src={car} alt={''}/>
+                            <span className={'metric-data'}><strong>{data? data.driven_miles : ''}</strong> Miles</span>
                         </div>
                         <div className={'metrics-item'}>
-                            <img className={'icon'} src={almond} alt={''}/>
-                            <p className={'styled-data'}>Taking <strong>{data ? data.showers : ''}</strong> Showers (8 Minute)</p>
+                            <img className={'icon'} src={shower} alt={''}/>
+                            <span className={'metric-data'}><strong>{data ? data.showers : ''}</strong> Showers (8 minutes)</span>
                         </div>
                         <div className={'metrics-item'}>
-                            <img className={'icon'} src={almond} alt={''}/>
-                            <p className={'styled-data'}>Heating a House for {data ? data.heating_days : ''} Days</p>
+                            <img className={'icon'} src={house} alt={''}/>
+                            <span className={'metric-data'}><strong>{data ? data.heating_days : ''}</strong> Days heating a house</span>
                         </div>
                     </div>
                 </div>
-
-                <Recommendations />
+                <Recommendations/>
             </div>
             <button className={'button_primary'}>+ Add this food today</button>
 

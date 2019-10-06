@@ -1,10 +1,13 @@
 body {
   position: relative;
   height: 100%;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  color: #171123; }
+  body * {
+    box-sizing: border-box; }
 
 h1 {
-  font-size: 3rem; }
+  font-size: 2.2rem; }
 
 h2 {
   font-size: 1.5rem; }
@@ -14,6 +17,7 @@ h3 {
 
 .app-container {
   padding: 20px 20px 40px 20px;
+  margin-bottom: 40px;
   background: #f1f1f1; }
 
 .date {
@@ -35,10 +39,29 @@ header {
   background: #ffffff;
   text-align: center;
   display: block;
-  position: relative; }
+  position: relative;
+  font-size: 1.4rem;
+  font-weight: 800;
+  cursor: pointer;
+  border-radius: 2px; }
   .button_primary:hover, .button_primary:focus {
     background: #f46036;
     color: #ffffff; }
+
+.button_item {
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  background: #ffffff;
+  align-items: center;
+  width: 100%;
+  margin: 5px 0px;
+  cursor: pointer; }
+  .button_item .icon {
+    height: 20px;
+    width: 20px; }
+  .button_item:hover, .button_item:focus {
+    background: #CCCCCC; }
 
 .styled-data {
   margin-left: 20px; }
@@ -47,47 +70,44 @@ header {
   display: flex;
   align-content: flex-start; }
 
-.emissions {
-  margin-left: 16px; }
-
-.info-container {
-  margin-top: 20px;
-  border: 1px solid black;
-  height: 350px; }
-
-.info-heading {
-  display: flex;
-  align-content: flex-start; }
-
-.info-item {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 20px; }
-
 .icon {
-  padding: 10px;
   font-weight: 800;
   height: 50px;
-  width: 50px; }
+  width: 50px;
+  margin: 0px 10px; }
 
-.metrics .metrics-heading {
-  font-size: 1rem;
-  font-weight: 400;
-  font-style: italic;
-  margin: 0px; }
-
-.metrics .metrics-container {
-  margin: 10px; }
-
-.metrics .metrics-item {
-  display: flex;
-  flex-direction: row; }
+.metrics {
+  max-width: 600px;
+  margin: 20px auto; }
+  .metrics .metrics-heading {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0px; }
+  .metrics .metrics-container {
+    margin: 10px; }
+  .metrics .metrics-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: .8rem;
+    padding: 10px;
+    font-weight: 800;
+    border-bottom: 1px solid #CCCCCC; }
+    .metrics .metrics-item .icon {
+      height: 25px;
+      width: 25px; }
+  .metrics .metric-data strong {
+    margin: 0px 10px;
+    font-size: 1.1rem; }
 
 .card {
   padding: 20px;
   background: #ffffff;
-  margin-top: 10px;
+  margin: 10px -20px 0px -20px;
   position: relative; }
+  .card .button_primary {
+    margin: 10px auto 0px auto; }
   .card .card-pointer {
     width: 0;
     height: 0;
@@ -103,12 +123,30 @@ header {
     align-items: center;
     justify-content: center; }
   .card .card-name {
-    display: inline; }
-  .card .info-container {
+    font-size: 1.8rem;
+    margin: 1rem 0; }
+  .card .serving-data {
+    margin: 10px 0px;
+    font-size: .8rem;
+    text-align: center;
+    padding: 0px 20px; }
+  .card .emissions-data {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 0px 20px; }
+    .card .emissions-data strong {
+      margin-left: 10px; }
+  .card .recommendations {
     background: #f1f1f1;
-    padding: 20px; }
-    .card .info-container .info-heading {
+    padding: 10px; }
+    .card .recommendations .title {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      margin-top: 0px;
+      text-align: center;
       font-weight: 300; }
+    .card .recommendations button {
+      padding: 10px; }
 
 footer {
   background: #171123;
@@ -126,4 +164,7 @@ footer {
     display: block;
     height: 100%;
     width: 100%;
-    padding: 20px; }
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: .03em; }
