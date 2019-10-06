@@ -10,21 +10,21 @@ class DropDown extends Component{
            'Avocado',
            'Banana',
            'Beans',
-           'Beef',
+           'Beef (steak)',
            'Beer',
            'Berries',
-           'grapes',
-           'bread',
-           'cheese',
-           'chicken',
-           'chocolate(dark)',
-           'chocolate(milk)',
-           'citrus fruit',
-           'coffee',
+           'Bread',
+           'Cheese',
+           'Chicken',
+           'Chocolate (dark)',
+           'Chocolate (milk)',
+           'Citrus Fruit',
+           'Coffee',
            'Eggs',
-           'Fish(farm)',
+           'Fish (farm)',
+           'Grapes',
            'Lamb',
-           'Almond Milk',
+           'Milk (almond)'
        ],
        Item:'',
        dataObject:[],
@@ -64,7 +64,7 @@ render(){
              )
          })}
          </select>
-         <Link className={'dropdown-search'} onClick={this.getItem} to={`/home/${this.state.Item}`}>Enter</Link>
+         <Link className={'dropdown-search'} onClick={this.getItem} to={`/home/beef`}>Enter</Link>
          {this.state.show && <div id={'fun-fact'}>
           <h2>Did you know...</h2>
           <p>Water Has a <strong>High</strong> Carbon Footprint</p>

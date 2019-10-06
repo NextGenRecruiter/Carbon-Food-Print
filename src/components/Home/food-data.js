@@ -25,16 +25,11 @@ export const FoodData = (props) => {
         <>
         <div className={'app-container'}>
             <h2>Search and Track</h2>
-            {/* <label htmlFor="foods">Add a food item</label>
-            <select id="foods">
-                <option>Food 1</option>
-                <option>Food 2</option>
-            </select> */}
             <div className={'card'}>
                 <span className={'card-pointer'}></span>
                 <div className={'card-header'}>
                     <img className={'icon'} src={beef} alt={'img'}/>
-                    <h3 className={'card-name'}>{data ? data.food_item : ''} </h3> 
+                    <h3 className={'card-name'}>{data ? `${data.food_item } (steak)`: ''} </h3> 
                 </div>
 
 
@@ -67,7 +62,7 @@ export const FoodData = (props) => {
                 <Recommendations/>
                 <button className={'button_primary' } onClick={() => Swal.fire(
         'Good job!',
-        'Beef has been added!',
+        'Beef (steak) has been added!',
         'success'
       )}>+ Add this food today</button>
             </div>

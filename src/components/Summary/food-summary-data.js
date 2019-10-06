@@ -43,7 +43,7 @@ class FoodData extends Component {
 
         return (
             <div className="app-container">
-                <span className="date">{this.props.date}10-05-2019</span>
+                <span className="date">{this.props.date}October 6th, 2019</span>
                 <h2>Today's Impact</h2>
                 
                     
