@@ -1,7 +1,6 @@
 import React, { Component, useState, useEffect } from 'react';
 import beef from '../../assets/beef-steak-svgrepo-com.svg';
 import axios from 'axios'
-import Recommendations from '../Home/recommendations';
 import car from '../../assets/car-compact-svgrepo-com.svg';
 import shower from '../../assets/bathtub-with-opened-shower-svgrepo-com.svg';
 import house from '../../assets/real-estate-house-property-for-business-svgrepo-com.svg';
@@ -21,6 +20,7 @@ export const FoodData = (props) => {
         getData();
     }, [])
 
+    console.log(data);
     return (
         <>
         <div className={'app-container'}>
@@ -42,7 +42,7 @@ export const FoodData = (props) => {
                     <span>CO2 Emmissions</span>
                     <strong className={'emissions'}>{data ? data.emissions_per_day_kg : ''} kg</strong>
                 </div>
-                <div className={'serving-data'}>(Serving:{fakeData.amount})</div>
+                <div className={'serving-data'}>(Serving:{data ? data.amount_per_day : ''})</div>
 
                 
                 <div className={'metrics'}>
