@@ -17,11 +17,11 @@ export const Recommendations = () => {
 
     return (
         <>
-        <div className={'app-container'}>
-            <h3>Recommendations for lower impact</h3>
+        <div className={'app-container rec'}>
+            <h3 className={'title'}>Recommendations for lower impact</h3>
             {data ? data.map(i => {
               return(
-                <div className={'metrics-container'} key={i.food_item}>
+                <div className={'rec-container'} key={i.food_item}>
                   <div className={'metrics-item'}>
                       <p className={'styled-data'}>{data? `${i.food_item} (${i.emissions_per_day_kg}kg/day)` : ''}</p>
                   </div>

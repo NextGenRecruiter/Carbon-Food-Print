@@ -160,6 +160,34 @@ header {
     .card .recommendations button {
       padding: 10px; }
 
+.recommendations {
+  background: #f1f1f1;
+  padding: 10px; }
+  .recommendations .title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    text-align: center;
+    font-weight: 300; }
+  .recommendations button {
+    padding: 10px; }
+
+.rec {
+  background: #f1f1f1;
+  border: 1px solid #CCCCCC; }
+
+.title {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  text-align: center;
+  font-weight: 600; }
+
+.rec-container {
+  border: 1px solid #CCCCCC;
+  background: white;
+  margin-bottom: 3px; }
+
 .dropdown {
   margin-bottom: 0px;
   padding-bottom: 0px; }
@@ -176,6 +204,8 @@ header {
     background: #f46036;
     padding: 10px 20px;
     color: #ffffff; }
+  .dropdown #fun-fact p:nth-child(3) {
+    font-style: italic; }
 
 footer {
   background: #171123;
