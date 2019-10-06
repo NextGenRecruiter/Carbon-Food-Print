@@ -10,7 +10,6 @@ render(){
  
   return (
     <div>
-      <FoodData/>
       <Recommendations />
       <Footer title={"View today's food"} link={'/summary'}/>
     </div>
