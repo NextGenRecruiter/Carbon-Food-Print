@@ -20,7 +20,6 @@ export const FoodData = (props) => {
         getData();
     }, [])
 
-    console.log(data);
     return (
         <>
         <div className={'app-container'}>

@@ -8,6 +8,6 @@ h3 {
     text-align: center;
 }
 .rotate {
-    transform: rotate(-90deg);
-    text-align: left; 
+    /* transform: rotate(-90deg); */
+    /* text-align: left;  */
 }
