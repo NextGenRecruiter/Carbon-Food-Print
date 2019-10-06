@@ -10,7 +10,7 @@ render(){
     <div className={'app'}>
       <DropDown/>
       <Footer 
-        dashboardLink={'dashboard'}
+        dashboardLink={'/dashboard'}
         homeLink={'/home'}
         summaryLink={'/summary'}
         titleDashboardLink={'Dashboard'}
