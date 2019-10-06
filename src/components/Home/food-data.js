@@ -1,4 +1,5 @@
 import React, { Component, useState } from 'react';
+import almond from '../../assets/almond-svgrepo-com.svg'
 import Axios from 'axios';
 
 
@@ -19,10 +20,7 @@ export const FoodData = (props) => {
     })
     return (
         <>
-        {JSON.stringify(item)}<
-
-            <p>{props.date}</p>
-        {/* <div className={'food-card-container'}>
+        <div className={'food-card-container'}>
             <div className={'food-card'}>
                 <div className={'header-container'}>
                    <p>{fakeData.foodItem} (Serving:{fakeData.amount})</p>
@@ -55,7 +53,7 @@ export const FoodData = (props) => {
             </div>
             <button className={'add-button'}>+ Add this food today</button>
             
-        </div> */}
+        </div>
         </>
     )
 };
