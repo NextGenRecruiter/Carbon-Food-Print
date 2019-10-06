@@ -7,7 +7,6 @@ import Dashboard from '../Dashboard/Dashboard'
 import Social from '../Social/Social'
 import { HashRouter as Router, Route, Redirect, Switch} from 'react-router-dom'
 import Header from '../Header/Header';
-import Footer from '../Footer/navigation-footer';
 
 class App extends Component{
   

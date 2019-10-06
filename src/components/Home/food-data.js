@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import beef from '../../assets/beef-steak-svgrepo-com.svg';
 import axios from 'axios'
 import car from '../../assets/car-compact-svgrepo-com.svg';

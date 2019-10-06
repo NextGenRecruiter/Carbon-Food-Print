@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 import { FoodData } from './food-data';
 import { Route, Switch } from 'react-router';
 import { Link } from 'react-router-dom';
