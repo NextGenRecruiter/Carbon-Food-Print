@@ -3,6 +3,9 @@ import { BarChart, Bar, XAxis, YAxis } from 'recharts';
 import Axios from 'axios'
 import './Dashboard.css';
 import Footer from '../Footer/navigation-footer';
+import car from '../../assets/car-compact-svgrepo-com.svg';
+import shower from '../../assets/bathtub-with-opened-shower-svgrepo-com.svg';
+import house from '../../assets/real-estate-house-property-for-business-svgrepo-com.svg';
 
 
 class Setting extends Component {
@@ -39,10 +42,9 @@ class Setting extends Component {
 
   render() {
     return (
-      <div>
-        <div className='height-of-header'></div>
+      <div className={'app-container graph'}>
         <div>
-          <h3>Your Carbon Foodprint this week:</h3>
+          <h2>Your Carbon FoodPrint:</h2>
           {/* <LineChart width={400} height={200} data={this.state.data} className='chart'>
             <Line type="monotone" dataKey="emissions" stroke="#8884d8" />
             <CartesianGrid stroke="#ccc" />
@@ -56,14 +58,28 @@ class Setting extends Component {
             <Bar type="monotone" dataKey="emissions" barSize={30} fill="#f46036" />
           </BarChart>
         </div>
-        <p></p>
-        <h3>Your peak emission day: {this.state.greatest.emissions} kg</h3>
-        <p>Comparable to:</p>
-        <ul>
-          <li>Driving {this.state.greatest.miles} miles,</li>
-          <li>Taking {this.state.greatest.showers} showers, or</li>
-          <li>Heating your house for {this.state.greatest.heating} days</li>
-        </ul>
+        <div className={'emissions-data smaller'}>
+          <h3>Your peak emission day: <strong>{this.state.greatest.emissions} kg</strong></h3>
+        </div>
+        <div className={'metrics'}>
+          <h4 className={'metrics-heading'}>
+              Which has the same impact as:
+          </h4>
+          <div className={'metrics-container'}>
+            <div className={'metrics-item'}>
+              <img className={'icon'} src={car} alt={''}/>
+              <span className={'metrics-data'}><strong>{this.state.greatest.miles}</strong> Miles Driven</span>
+            </div>
+            <div className={'metrics-item'}>
+              <img className={'icon'} src={shower} alt={''}/>
+              <span><strong> {this.state.greatest.showers}</strong> Showers (8 minutes)</span>
+            </div>
+            <div className={'metrics-item'}>
+              <img className={'icon'} src={house} alt={''}/>
+              <span><strong>{this.state.greatest.heating}</strong> Days heating a house</span>
+            </div>
+          </div>
+        </div>
         <Footer 
           dashboardLink={'dashboard'}
           homeLink={'/home'}
