@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
+//import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 import Axios from 'axios'
 
 
@@ -30,12 +30,12 @@ class Setting extends Component {
         <p>Hello from Setting</p>
         {JSON.stringify(this.state.data)}
         <div>
-          <LineChart width={300} height={200} data={this.state.data}>
+          {/* <LineChart width={300} height={200} data={this.state.data}>
             <Line type="monotone" dataKey="emissions" stroke="#8884d8"/>
             <CartesianGrid stroke="#ccc" />
             <XAxis dataKey="day" />
             <YAxis/>
-          </LineChart>
+          </LineChart> */}
         </div>
 
       </div>

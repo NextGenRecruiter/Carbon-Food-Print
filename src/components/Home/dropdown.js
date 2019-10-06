@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { FoodData } from './food-data';
+import { Route, Switch } from 'react-router';
+import { Link } from 'react-router-dom';
 
 class DropDown extends Component{
    state = {
@@ -35,14 +37,14 @@ componentDidMount = () =>{
 
 getItem = () =>{
     this.setState.show = !this.setState.show;
-//    axios.get('/food/' + this.state.Item).then( (response) => {
-//        this.setState({
-//            dataObject:response.data,
-//        })
-//        console.log(response.data);
-//    }).catch((error)=>{
-//        console.log(error);
-//    });
+   axios.get('/food/').then( (response) => {
+       this.setState({
+           dataObject:response.data,
+       })
+       console.log(response.data);
+   }).catch((error)=>{
+       console.log(error);
+   });
 }
 setItem = (value) =>{
    this.setState({
@@ -59,9 +61,13 @@ render(){
            )
        })}
        </select>
-       <button onClick={this.getItem}>Enter</button>
-
-       { this.state.show ? <FoodData /> : null}
+       <Link onClick={this.getItem} to={`/home/${this.state.Item}`}>Enter</Link>
+       <Switch>
+       <Route
+          path={'/home/beef'}
+          component={FoodData}
+        />
+       </Switch>
        </>
    )
 }
