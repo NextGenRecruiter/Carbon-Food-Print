@@ -5,6 +5,7 @@ import car from '../../assets/car-compact-svgrepo-com.svg';
 import shower from '../../assets/bathtub-with-opened-shower-svgrepo-com.svg';
 import house from '../../assets/real-estate-house-property-for-business-svgrepo-com.svg';
 import Recommendations from './recommendations';
+import Swal from 'sweetalert2';
 
 export const FoodData = (props) => {
     const [data, setData] = useState();
@@ -64,7 +65,11 @@ export const FoodData = (props) => {
                     </div>
                 </div>
                 <Recommendations/>
-                <button className={'button_primary'}>+ Add this food today</button>
+                <button className={'button_primary' } onClick={() => Swal.fire(
+        'Good job!',
+        'Beef has been added!',
+        'success'
+      )}>+ Add this food today</button>
             </div>
         </div>
         </>
