@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react';
 import almond from '../../assets/almond-svgrepo-com.svg';
 import beef from '../../assets/beef-steak-svgrepo-com.svg';
+import car from '../../assets/car-compact-svgrepo-com.svg';
 import Axios from 'axios';
 
 
@@ -47,7 +48,7 @@ export const FoodData = (props) => {
                             <p className={'styled-data'}>{fakeData.miles} Miles driven</p>
                         </div>
                         <div className={'metrics-item'}>
-                            <img className={'icon'} src={almond} alt={''}/>
+                            <img className={'icon'} src={car} alt={''}/>
                             <p className={'styled-data'}>{fakeData.miles} Showers (8 minutes)</p>
                         </div>
                         <div className={'metrics-item'}>
