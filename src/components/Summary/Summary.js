@@ -8,7 +8,9 @@ class FoodData extends Component {
 
         return (
             <>
+            <div className={'app'}>
             <FoodSummaryData />
+            </div>
             <Footer 
                 dashboardLink={'dashboard'}
                 homeLink={'/home'}
