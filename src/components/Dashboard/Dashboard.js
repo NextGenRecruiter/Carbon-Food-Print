@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BarChart, Bar, XAxis, YAxis } from 'recharts';
 import Axios from 'axios'
 import './Dashboard.css';
+import Footer from '../Footer/navigation-footer';
 
 
 class Setting extends Component {
@@ -63,7 +64,14 @@ class Setting extends Component {
           <li>Taking {this.state.greatest.showers} showers, or</li>
           <li>Heating your house for {this.state.greatest.heating} days</li>
         </ul>
-
+        <Footer 
+          dashboardLink={'dashboard'}
+          homeLink={'/home'}
+          summaryLink={'/summary'}
+          titleDashboardLink={'Dashboard'}
+          titleHomeLink={'Home'}
+          titleSummaryLink={'Summary'}
+        />
 
 
       </div>
