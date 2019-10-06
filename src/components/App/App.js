@@ -5,9 +5,8 @@ import Home from '../Home/Home'
 import Summary from '../Summary/Summary'
 import Dashboard from '../Dashboard/Dashboard'
 import Social from '../Social/Social'
-import { HashRouter as Router, Route} from 'react-router-dom'
+import { HashRouter as Router, Route, Redirect, Switch} from 'react-router-dom'
 import Header from '../Header/Header';
-import Footer from '../Footer/navigation-footer';
 
 class App extends Component{
   
@@ -16,10 +15,13 @@ class App extends Component{
       <div>
         <Header/>
         <Router>
-          <Route  path='/Home' exact component={Home}/>
-          <Route  path='/Dashboard' exact component={Dashboard}/>
-          <Route  path='/Summary' component={Summary}/>
-          <Route  path='/Social' exact component={Social}/>
+          <Switch>
+            <Route  path='/home' component={Home}/>
+            <Route  path='/dashboard' exact component={Dashboard}/>
+            <Route  path='/summary' exact component={Summary}/>
+            <Route  path='/social' exact component={Social}/>
+            <Redirect to="/home" />
+          </Switch>
         </Router>
       </div>
     )

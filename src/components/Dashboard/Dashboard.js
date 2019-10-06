@@ -48,10 +48,10 @@ class Setting extends Component {
             <XAxis dataKey="day" />
             <YAxis />
           </LineChart> */}
-          <p className='rotate'>Emissions (kg)</p>
+          {/* <p className='rotate'>Emissions (kg)</p> */}
           <BarChart width={300} height={200} data={this.state.data} className='chart'>
             <XAxis dataKey="day" />
-            <YAxis dataKey='emissions'/>
+            <YAxis dataKey='emissions' label={{value: 'Emissions (kg)', orientation: 'right', angle: -90}}/>
             <Bar type="monotone" dataKey="emissions" barSize={30} fill="#8884d8" />
           </BarChart>
         </div>

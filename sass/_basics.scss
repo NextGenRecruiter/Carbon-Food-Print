@@ -1,0 +1,29 @@
+body{
+	position:relative;
+	height:100%;
+	font-family: 'Roboto', sans-serif;
+	color:$body-text;
+
+	*{
+		box-sizing:border-box;
+	}
+}
+h1{
+	font-size:2.2rem;
+}
+h2{
+	font-size:1.5rem;
+}
+h3{
+	font-size:1.25rem;
+}
+.app-container{
+	padding:20px 20px 40px 20px;
+	margin-bottom:40px;
+	background:$grey-1;
+}
+
+.date{
+	font-weight:200;
+	font-style:italic;
+}

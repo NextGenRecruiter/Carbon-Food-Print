@@ -39,19 +39,25 @@ class FoodData extends Component {
     render() {
 
         return (
-            <div>
-                <h2>{this.props.date}</h2>
-                <h2>Summary</h2>
-                <p>Co2 Emissions Today: {this.state.totals.emissions}</p>
-                <p>{this.state.totals.miles} Miles Driven</p>
-                <p>{this.state.totals.showers} Showers (8 minutes)</p>
-                <p>{this.state.totals.heating} Days heating a house</p>
-
-                <h2>Food that you have logged today</h2>
-                <Link to='/Home'><button>Add another food today</button></Link>
+            <div className="app-container">
+                <span className="date">{this.props.date}10-05-2019</span>
+                <h2>Today's Impact</h2>
+                <div className="card">
+                	<h3>Summary</h3>
+                	<p>Co2 Emissions Today: <span>{this.state.totals.emissions}kg</span></p>
+                	<div className="metrics">
+                		<p>{this.state.totals.miles} Miles Driven</p>
+                		<p>{this.state.totals.showers} Showers (8 minutes)</p>
+                		<p>{this.state.totals.heating} Days heating a house</p>
+                	</div>
+                </div>
+                <div>
+                	<h3>Food that you have logged today</h3>
+                	<Link to='/Home' className="button_primary"><span className="icon plus">+</span>Add another food today</Link>
+                </div>
                 <ul>
                     {this.state.foods.map(food => {
-                        return <li>{food}</li>
+                        return <li key={food}>{food}</li>
                     })}
                 </ul>
             </div>

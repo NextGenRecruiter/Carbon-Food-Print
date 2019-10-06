@@ -1,43 +1,40 @@
 // original styling to be broken into sass components
 
-.App {
-  text-align: center;
-}
-.App-header {
-  background-color: #282c34;
-  background-image: url(food.jpg);
-  background-repeat: no-repeat;
-  max-width: 100%;
-  height: 40vmin;
+// .App {
+//   text-align: center;
+// }
+// .App-header {
+//   background-color: #282c34;
+//   background-image: url(food.jpg);
+//   background-repeat: no-repeat;
+//   max-width: 100%;
+//   height: 40vmin;
 
-}
-.App-link {
-  color: #09d3ac;
-}
+// }
+// .App-link {
+//   color: #09d3ac;
+// }
 
-.food-card-container {
-  margin:20px;
-  /* display: flex;
-  justify-content: center; */
-}
+// .food-card-container {
+//   margin:20px;
+//   /* display: flex;
+//   justify-content: center; */
+// }
 
-.food-card {
-  padding: 20px;
-  height: 500px;
-  width:500px;
-  border: 1px solid black;
-}
+// .food-card {
+//   padding: 20px;
+//   height: 500px;
+//   width:500px;
+//   border: 1px solid black;
+// }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px;
-}
+// .header-container {
+//   display: flex;
+//   justify-content: space-between;
+//   margin-bottom: 16px;
+// }
 
-.styled-img {
-    height: 50px;
-    width: 50px;
-}
+
 
 .styled-data {
   margin-left: 20px;
@@ -48,27 +45,4 @@
   align-content: flex-start
 }
 
-.emissions {
-  margin-left: 16px;
-}
 
-.info-container {
-  margin-top: 20px;
-  border: 1px solid black;
-  height: 350px;
-}
-
-.info-heading {
-  display: flex;
-  align-content: flex-start
-}
-
-.info {
-
-}
-
-.info-item {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 20px;
-}

@@ -1,0 +1,66 @@
+
+
+.card {
+  padding: 20px;
+  background:$white;
+  margin:10px -20px 0px -20px;
+  position:relative;
+
+  .button_primary{
+  	margin:10px auto 0px auto;
+  }
+
+  .card-pointer{
+  	width: 0; 
+	height: 0; 
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 10px solid $white;
+	position:absolute;
+	bottom:100%;
+	left:calc(50% - 50px);
+  }
+
+  .card-header{
+  	display:flex;
+  	flex-direction:row;
+  	align-items:center;
+  	justify-content:center;
+
+  }
+  .card-name{
+  	font-size:1.8rem;
+  	margin:1rem 0;
+  }
+  .serving-data{
+  	margin: 10px 0px;
+  	font-size:.8rem;
+  	text-align:center;
+  	padding:0px 20px;
+  }
+  .emissions-data{
+  	text-align:center;
+  	font-size:1.1rem;
+  	padding:0px 20px;
+
+  	strong{
+  		margin-left:10px;
+  	}
+  }
+
+  .recommendations{
+  	background:$grey-1;
+  	padding:10px;
+  	.title{
+  		font-size:1rem;
+  		margin-bottom:10px;
+  		margin-top:0px;
+  		text-align:center;
+  		font-weight:300;
+  	}
+  	button{
+  		padding:10px;
+  	}
+  }
+}
+
