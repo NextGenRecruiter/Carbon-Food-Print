@@ -66,8 +66,9 @@ render(){
          </select>
          <Link className={'dropdown-search'} onClick={this.getItem} to={`/home/${this.state.Item}`}>Enter</Link>
          {this.state.show && <div id={'fun-fact'}>
-          <h2>Facts about Carbon Emissions</h2>
-          <p>This is a really sweet fact about Carbon Emissions and how you can help the cause!</p>
+          <h2>Did you know...</h2>
+          <p>Water Has a <strong>High</strong> Carbon Footprint</p>
+          <p>The efforts to maintain and purify our drinking water can take a huge toll on carbon emissions. Water conservation is one of the keys to reducing our CO2 output and saving our planet from global warming. </p>
          </div>}
        </div>
 
