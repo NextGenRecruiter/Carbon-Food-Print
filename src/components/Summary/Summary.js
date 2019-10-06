@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-import { FoodData } from './food-data';
+import FoodData from './food-data';
 import Axios from 'axios';
 
 class Summary extends Component {

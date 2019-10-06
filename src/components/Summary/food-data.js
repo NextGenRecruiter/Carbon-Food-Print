@@ -1,60 +1,56 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import Axios from 'axios';
+import { Link } from 'react-router-dom'
 
+class FoodData extends Component {
+    state = {
+        foods: [],
+        totals: []
+    }
+    componentDidMount = () => {
+        // list of all foods in the current day
+        Axios.get('/days/foods/' + this.props.date).then(response => {
+            console.log(response)
+            this.setState({
+                ...this.state,
+                foods: response.data[0].foods
+            })
+        }).then(error => {
+            console.log(error)
+        })
+        // list of the totals comparisons
+        Axios.get('/days/totals/' + this.props.date).then(response => {
+            console.log(response)
+            this.setState({
+                ...this.state,
+                totals: response.data[0]
+            })
+        }).then(error => {
+            console.log(error)
+        })
+    }
 
-const fakeData = {
-    foodItem: 'Apple',
-    amount: '1/day',
-    emissions: '0.0329',
-    miles: '0.0877',
-    showers: '0.2192'
-};
+    render() {
 
-export const FoodData = (props) => {
-    const [item, setItem] = useState([]);
-    Axios.get('/days/' + props.date).then(response => {
-        setItem(response.data)
-    }).then(error => {
-        console.log(error)
-    })
-    return (
-        <>
-        {JSON.stringify(item)}<
+        return (
+            <div>
+                <h2>{this.props.date}</h2>
+                <h2>Summary</h2>
+                <p>Co2 Emissions Today: {this.state.totals.emissions}</p>
+                <p>{this.state.totals.miles} Miles Driven</p>
+                <p>{this.state.totals.showers} Showers (8 minutes)</p>
+                <p>{this.state.totals.heating} Days heating a house</p>
 
-            <p>{props.date}</p>
-        {/* <div className={'food-card-container'}>
-            <div className={'food-card'}>
-                <div className={'header-container'}>
-                   <p>{fakeData.foodItem} (Serving:{fakeData.amount})</p>
-                    <button>ADD</button> 
-                </div>
-                <div className={'icon-container'}>
-                    <img className={'styled-img'} src={almond} alt={'img'}/>
-                    <p className={'emissions'}>{fakeData.emissions}</p>
-                </div>
-                <div className={'info-container'}>
-                    <div className={'info-heading'}>
-                        What Does This Mean??
-                    </div>
-                    <div clasName={'info'}>
-                        <div className={'info-item'}>
-                            <img className={'styled-img'} src={almond} alt={'img'}/>
-                            <p className={'styled-data'}>{fakeData.miles}</p>
-                        </div>
-                        <div className={'info-item'}>
-                            <img className={'styled-img'} src={almond} alt={'img'}/>
-                            <p className={'styled-data'}>{fakeData.miles}</p>
-                        </div>
-                        <div className={'info-item'}>
-                            <img className={'styled-img'} src={almond} alt={'img'}/>
-                            <p className={'styled-data'}>{fakeData.miles}</p>
-                        </div>
-                    </div>
-                </div>
-                
+                <h2>Food that you have logged today</h2>
+                <Link to='/Home'><button>Add another food today</button></Link>
+                <ul>
+                    {this.state.foods.map(food => {
+                        return <li>{food}</li>
+                    })}
+                </ul>
             </div>
-            
-        </div> */}
-        </>
-    )
-};
+        )
+    }
+}
+
+export default FoodData;
