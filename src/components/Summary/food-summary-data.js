@@ -9,7 +9,7 @@ class FoodData extends Component {
     }
     fetchFoods = () => {
         // list of all foods in the current day
-        Axios.get('/days/foods/' + this.props.date).then(response => {
+        Axios.get('/days/foods').then(response => {
             console.log(response)
             this.setState({
                 ...this.state,
@@ -21,7 +21,7 @@ class FoodData extends Component {
     }
     fetchTotals = () => {
         // list of the totals comparisons
-        Axios.get('/days/totals/' + this.props.date).then(response => {
+        Axios.get('/days/totals').then(response => {
             console.log(response)
             this.setState({
                 ...this.state,
