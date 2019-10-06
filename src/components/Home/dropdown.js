@@ -36,22 +36,30 @@ componentDidMount = () =>{
 }
 
 getItem = () =>{
-    this.setState.show = !this.setState.show;
-   axios.get('/food/').then( (response) => {
-       this.setState({
-           dataObject:response.data,
-       })
-       console.log(response.data);
-   }).catch((error)=>{
-       console.log(error);
-   });
+//    axios.get('/food/').then( (response) => {
+//        this.setState({
+//            dataObject:response.data,
+//        })
+//        //console.log(response.data);
+//    }).catch((error)=>{
+//        console.log(error);
+//    });
 }
 setItem = (value) =>{
    this.setState({
        Item:value,
    })
 }
+
+
+foodCard = () => {
+    return (
+        <FoodData />
+    )
+}
+
 render(){
+
    return(
        <>
        <select onChange={event => {console.log(event.target.value); this.setItem(event.target.value)}}>
@@ -65,7 +73,7 @@ render(){
        <Switch>
        <Route
           path={'/home/beef'}
-          component={FoodData}
+          render={this.foodCard}
         />
        </Switch>
        </>

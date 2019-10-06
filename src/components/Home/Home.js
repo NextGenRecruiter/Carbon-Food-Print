@@ -12,7 +12,6 @@ render(){
   return (
     <div>
       <DropDown/>
-      <Recommendations />
       <Footer title={"View today's food"} link={'/summary'}/>
     </div>
   )
