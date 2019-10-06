@@ -1,0 +1,21 @@
+footer{
+	background:$black;
+	color:$white;
+	// height:40px;
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	display:flex;
+	align-content:stretch;
+
+	a{
+		text-decoration:none;
+		text-align:center;
+		color:$white;
+		display:block;
+		height:100%;
+		width:100%;
+		padding:20px
+	}
+}
