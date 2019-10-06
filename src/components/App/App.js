@@ -6,12 +6,15 @@ import Summary from '../Summary/Summary'
 import Dashboard from '../Dashboard/Dashboard'
 import Social from '../Social/Social'
 import { HashRouter as Router, Route} from 'react-router-dom'
+import Header from '../Header/Header';
+import Footer from '../Footer/navigation-footer';
 
 class App extends Component{
   
   render(){
     return(
       <div>
+        <Header/>
         <Router>
           <Route  path='/Home' exact component={Home}/>
           <Route  path='/Dashboard' exact component={Dashboard}/>
