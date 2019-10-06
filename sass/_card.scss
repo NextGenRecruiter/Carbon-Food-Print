@@ -41,6 +41,10 @@
   	font-size:1.1rem;
   	padding:0px 20px;
 
+    &.smaller h3{
+      margin:0px;
+    }
+
   	strong{
   		margin-left:10px;
   	}
@@ -60,5 +64,61 @@
   		padding:10px;
   	}
   }
+  .food-list-container{
+    // margin:20px;
+    background:$grey-1;
+    padding:10px;
+    h4{
+      font-size:1rem;
+      margin-bottom:10px;
+      margin-top:0px;
+      text-align:center;
+      font-weight:300;
+    }
+  }
+  .food-list{
+    list-style:none;
+    margin:20px 0px;
+    padding:0px;
+    li{
+      padding:10px 20px;
+      border:1px solid $grey-2;
+      margin-bottom:5px;
+      background:$white;
+    }
+  }
 }
 
+.recommendations{
+	background:$grey-1;
+	padding:10px;
+	.title{
+		font-size:1rem;
+		margin-bottom:10px;
+		margin-top:0px;
+		text-align:center;
+		font-weight:300;
+	}
+	button{
+		padding:10px;
+	}
+}
+
+.rec {
+	background: $grey-1;
+	border: 1px solid $grey-2;
+}
+.rec-title{
+	font-size:1rem;
+	margin-bottom:10px;
+	margin-top:0px;
+	text-align:center;
+	font-weight:600;
+}
+
+.rec-container {
+	border: 1px solid $grey-2;
+	background: white;
+	margin-bottom: 3px;
+
+}

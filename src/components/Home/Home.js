@@ -9,7 +9,14 @@ render(){
   return (
     <div className={'app'}>
       <DropDown/>
-      <Footer title={"View today's food"} link={'/summary'}/>
+      <Footer 
+        dashboardLink={'/dashboard'}
+        homeLink={'/home'}
+        summaryLink={'/summary'}
+        titleDashboardLink={'Dashboard'}
+        titleHomeLink={'Home'}
+        titleSummaryLink={'Summary'}
+      />
     </div>
   )
 }
