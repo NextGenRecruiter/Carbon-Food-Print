@@ -20,7 +20,6 @@ export const FoodData = (props) => {
         getData();
     }, [])
 
-    console.log(data)
     return (
         <>
         <div className={'app-container'}>
@@ -36,25 +35,30 @@ export const FoodData = (props) => {
                     <img className={'icon'} src={beef} alt={'img'}/>
                     <h3 className={'card-name'}>{data ? data.food_item : ''} </h3>
                     <div className={'card-emissions'}>
-                        <span className={'emissions'}>{data ? data.emissions_per_day_kg : ''}</span>
                         <span>(Serving:{data ? data.amount_per_day : ''})</span>
+                    </div>
+                </div>
+                <div className={'card-header'}>
+                    <div className={'card-emissions'}>
+                        <span className={'emissions'}>This is contributing to <strong>{data ? data.emissions_per_day_kg : ''}kg</strong> of you daily greenhouse gas emissions</span>
                     </div>
                 </div>
                 <div className={'metrics'}>
                     <h4 className={'metrics-heading'}>
-                        The same impact as:
+                        Which has the same impact as:
                     </h4>
                     <div className={'metrics-container'}>
                         <div className={'metrics-item'}>
-                            <p className={'styled-data'}>{data? data.driven_miles : ''} Miles driven</p>
+                            <img className={'icon'} src={almond} alt={''}/>
+                            <p className={'styled-data'}>Driving <strong>{data? data.driven_miles : ''}</strong> Miles</p>
                         </div>
                         <div className={'metrics-item'}>
                             <img className={'icon'} src={almond} alt={''}/>
-                            <p className={'styled-data'}>{data ? data.showers : ''} Showers (8 minutes)</p>
+                            <p className={'styled-data'}>Taking <strong>{data ? data.showers : ''}</strong> Showers (8 Minute)</p>
                         </div>
                         <div className={'metrics-item'}>
                             <img className={'icon'} src={almond} alt={''}/>
-                            <p className={'styled-data'}>{data ? data.heating_days : ''} Days heating a house</p>
+                            <p className={'styled-data'}>Heating a House for {data ? data.heating_days : ''} Days</p>
                         </div>
                     </div>
                 </div>
@@ -68,4 +72,3 @@ export const FoodData = (props) => {
     )
 };
 
-export default FoodData;

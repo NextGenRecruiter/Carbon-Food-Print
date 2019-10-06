@@ -40,11 +40,11 @@ class FoodData extends Component {
 
         return (
             <div className="app-container">
-                <span className="date">{this.props.date}05-20-2019</span>
+                <span className="date">{this.props.date}10-05-2019</span>
                 <h2>Today's Impact</h2>
                 <div className="card">
                 	<h3>Summary</h3>
-                	<p>Co2 Emissions Today: <span>147{this.state.totals.emissions}</span></p>
+                	<p>Co2 Emissions Today: <span>{this.state.totals.emissions}kg</span></p>
                 	<div className="metrics">
                 		<p>{this.state.totals.miles} Miles Driven</p>
                 		<p>{this.state.totals.showers} Showers (8 minutes)</p>
