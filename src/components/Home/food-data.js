@@ -4,6 +4,7 @@ import beef from '../../assets/beef-steak-svgrepo-com.svg';
 import car from '../../assets/car-compact-svgrepo-com.svg';
 import shower from '../../assets/bathtub-with-opened-shower-svgrepo-com.svg';
 import house from '../../assets/real-estate-house-property-for-business-svgrepo-com.svg';
+import Recommendations from './recommendations';
 import Axios from 'axios';
 
 
@@ -41,8 +42,8 @@ export const FoodData = (props) => {
                     
                 </div>
                 <div className={'emissions-data'}>
-                    <strong>CO2 Emmissions</strong>
-                    <span className={'emissions'}>{fakeData.emissions} kg</span>
+                    <span>CO2 Emmissions</span>
+                    <strong className={'emissions'}>{fakeData.emissions} kg</strong>
                 </div>
                 <div className={'serving-data'}>(Serving:{fakeData.amount})</div>
 
@@ -66,6 +67,7 @@ export const FoodData = (props) => {
                         </div>
                     </div>
                 </div>
+                <Recommendations/>
 
                 <button className={'button_primary'}>+ Add this food today</button>
             </div>
