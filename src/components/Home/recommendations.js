@@ -18,7 +18,7 @@ export const Recommendations = () => {
     return (
         <>
         <div className={'app-container rec'}>
-            <h3 className={'title'}>Recommendations for lower impact</h3>
+            <h3 className={'rec-title'}>Recommendations for lower impact</h3>
             {data ? data.map(i => {
               return(
                 <div className={'rec-container'} key={i.food_item}>
