@@ -1,9 +1,13 @@
 .chart {
-   margin-left: -30px;
+   /* margin-left: -30px; */
 }
 .height-of-header {
     height: 100px;
 }
 h3 {
     text-align: center;
+}
+.rotate {
+    transform: rotate(-90deg);
+    text-align: left; 
 }

@@ -34,10 +34,7 @@ class Setting extends Component {
   }
   componentDidMount = () => {
     this.fetchData();
-  }
-  renderCustomBarLabel = ({ payload, x, y, width, height, value }) => {
-    return <text x={x + width / 2} y={y} fill="#666" textAnchor="middle" dy={-6}>{`value: ${this.state.data.emissions}`}</text>;
-  };
+  } 
 
   render() {
     return (
@@ -45,17 +42,17 @@ class Setting extends Component {
         <div className='height-of-header'></div>
         <div>
           <h3>Your Carbon Foodprint this week:</h3>
-          <LineChart width={400} height={200} data={this.state.data} className='chart'>
+          {/* <LineChart width={400} height={200} data={this.state.data} className='chart'>
             <Line type="monotone" dataKey="emissions" stroke="#8884d8" />
             <CartesianGrid stroke="#ccc" />
             <XAxis dataKey="day" />
             <YAxis />
-          </LineChart>
-          <BarChart width={400} height={200} data={this.state.data} className='chart'>
+          </LineChart> */}
+          <p className='rotate'>Emissions (kg)</p>
+          <BarChart width={300} height={200} data={this.state.data} className='chart'>
             <XAxis dataKey="day" />
             <YAxis dataKey='emissions'/>
-            <Bar type="monotone" dataKey="uv" barSize={30} fill="#8884d8"
-              label={this.renderCustomBarLabel} />
+            <Bar type="monotone" dataKey="emissions" barSize={30} fill="#8884d8" />
           </BarChart>
         </div>
         <p></p>
