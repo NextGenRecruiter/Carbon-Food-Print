@@ -2,11 +2,14 @@
 
 .card {
   padding: 20px;
-  // height: 500px;
-  // width:500px;
   background:$white;
   margin-top:10px;
   position:relative;
+
+  .button_primary{
+  	margin:0 auto;
+  	width:350px;
+  }
 
   .card-pointer{
   	width: 0; 
@@ -24,10 +27,25 @@
   	flex-direction:row;
   	align-items:center;
   	justify-content:center;
+
+  	h3{
+  		margin:1rem 0;
+  	}
+  }
+  .serving-data{
+  	margin: 10px 0px;
+  	font-size:.8rem;
+  	text-align:center;
+  	padding:0px 20px;
+  }
+  .emissions-data{
+  	text-align:center;
+  	font-size:1.2rem;
+  	padding:0px 20px;
   }
 
   .card-name{
-  	display:inline;
+  	font-size:2rem;
   }
 
  	.info-container{

@@ -38,7 +38,7 @@ class FoodData extends Component {
                 <h2>Today's Impact</h2>
                 <div class="card">
                 	<h3>Summary</h3>
-                	<p>Co2 Emissions Today: <span>147{this.state.totals.emissions}</span></p>
+                	<p>Co2 Emissions Today: <span>147{this.state.totals.emissions} kg</span></p>
                 	<div class="metrics">
                 		<p>{this.state.totals.miles} Miles Driven</p>
                 		<p>{this.state.totals.showers} Showers (8 minutes)</p>
