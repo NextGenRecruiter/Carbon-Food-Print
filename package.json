@@ -6,7 +6,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "express": "^4.17.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "nodeman": "^1.1.2",
     "nodemon": "^1.19.3",
     "pg": "^7.12.1",
